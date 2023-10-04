@@ -143,6 +143,7 @@ const ContactSection: React.FC<ContactSectionProps> = ({ info }) => {
               height={400}
               alt="My Logo"
               className=""
+              loading="eager"
             />
             <button
               className="py-2 px-4 mb-4 bg-Text-Color hover:contrast-50 transition-all ease-linear text-Primary-Green rounded-sm"
