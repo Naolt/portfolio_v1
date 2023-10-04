@@ -22,6 +22,11 @@ export default function RootLayout({
   };
 
   useEffect(() => {
+    const prefersDarkMode = window.matchMedia(
+      "(prefers-color-scheme: dark)"
+    ).matches;
+    setDarkMode(prefersDarkMode);
+
     const handleScroll = () => {
       const currentScrollable = scrollable.current; // Create a variable to hold the current value
       if (currentScrollable) {
@@ -57,8 +62,11 @@ export default function RootLayout({
   }, []);
 
   useEffect(() => {
+    const prefersDarkMode = window.matchMedia(
+      "(prefers-color-scheme: dark)"
+    ).matches;
     const localDarkMode = JSON.parse(
-      localStorage.getItem("darkMode") || "false"
+      localStorage.getItem("darkMode") || `${prefersDarkMode}`
     );
     if (localDarkMode !== darkMode) {
       setDarkMode(localDarkMode);

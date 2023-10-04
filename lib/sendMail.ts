@@ -20,12 +20,15 @@ export async function sendMail(
     text: otpText + " " + fromEmail,
   };
 
-  transporter.sendMail(mailOptions, function (error: any, info: any) {
-    if (error) {
-      throw new Error(error);
-    } else {
-      console.log("Email Sent");
-      return true;
-    }
+  await new Promise((resolve, reject) => {
+    transporter.sendMail(mailOptions, function (error: any, info: any) {
+      if (error) {
+        console.error(error);
+        reject(error);
+      } else {
+        console.log(info);
+        resolve(info);
+      }
+    });
   });
 }
