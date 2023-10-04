@@ -4,10 +4,6 @@ import "./globals.css";
 import Navigation from "./components/navigation";
 import { useState, useRef, useEffect } from "react";
 
-export const metadata = {
-  title: "Portfolio",
-};
-
 export default function RootLayout({
   children,
 }: {
