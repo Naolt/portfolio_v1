@@ -20,8 +20,9 @@ const ProjectsSection: React.FC<ProjectsSectionProps> = ({ projects }) => {
       transition={{ duration: 0.75, ease: "easeOut" }}
       exit={{ opacity: 1 }}
       id="Projects"
+      className="mt-10 sm:mt-0"
     >
-      <h1 className="block md:hidden dark:text-Text-Color text-Background font-Montserrat  text-3xl   md:text-6xl capitalize font-bold my-11 text-center md:text-start">
+      <h1 className=" mt-10 block md:hidden dark:text-Text-Color text-Background font-Montserrat  text-3xl   md:text-6xl capitalize font-bold my-11 text-center md:text-start">
         Projects
       </h1>
       <div

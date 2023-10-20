@@ -18,7 +18,7 @@ const AboutSection: React.FC<AboutSectionProps> = ({ info }) => {
       transition={{ duration: 0.75, ease: "easeOut" }}
       exit={{ opacity: 1 }}
       id="About"
-      className="px-10 md:px-24  w-screen min-h-screen flex justify-center md:items-start items-center  flex-col snap-center"
+      className=" px-10 md:px-24 w-screen min-h-screen flex justify-center md:items-start items-center  flex-col snap-center"
     >
       <m.div
         className="absolute w-1/2 h-screen top-0 left-0 z-20 bg-Dark-Green  "
