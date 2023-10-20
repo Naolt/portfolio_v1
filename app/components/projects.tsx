@@ -75,7 +75,6 @@ const ProjectsSection: React.FC<ProjectsSectionProps> = ({ projects }) => {
                       <a
                         target={"_blank"}
                         href={project.deployedSiteLink || "/"}
-                        className="flex gap-2 items-center px-4 py-2 rounded-3xl bg-Light-Green text-Text-Color transition-all ease-linear duration-75 hover:bg-Light-Green/[0.9] "
                       >
                         <button className="flex gap-2 items-center px-4 py-2 border-2 rounded-3xl bg-Background text-Text-Color transition-all ease-linear duration-75 hover:bg-Background/[0.9] ">
                           <AiFillPlayCircle />
@@ -84,11 +83,7 @@ const ProjectsSection: React.FC<ProjectsSectionProps> = ({ projects }) => {
                       </a>
                     )}
                     {project.githubLink && (
-                      <a
-                        target={"_blank"}
-                        href={project.githubLink || "/"}
-                        className="flex gap-2 items-center px-4 py-2 rounded-3xl bg-Light-Green text-Text-Color transition-all ease-linear duration-75 hover:bg-Light-Green/[0.9] "
-                      >
+                      <a target={"_blank"} href={project.githubLink || "/"}>
                         <button className="flex gap-2 items-center px-4 py-2 border-2 rounded-3xl border-Background text-Background transition-all ease-linear duration-75 hover:bg-Background/[0.1] ">
                           <AiFillGithub />
                           Github
